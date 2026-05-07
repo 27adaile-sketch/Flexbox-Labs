@@ -1,0 +1,16 @@
+.flex1 {
+    display: flex; /* turns on flex */
+    flex-direction: row; /* stack items side by side */
+    justify-content: space-between; /* pushes flex2 to the left and flex3 to the right */
+    align-items: center; /* centers items vertically */
+    background-color: lightblue; /* Optional: adds color like the example */
+    padding: 10px; /* Optional: adds some breathing room */
+}
+
+.flex2, .flex3 {
+    display: flex; /* turns on flex for the inner groups */
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 32px; /* sets a 32px gap between the individual links */
+}
