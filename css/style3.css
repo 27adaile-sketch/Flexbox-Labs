@@ -1,0 +1,42 @@
+/* Base setup */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* 5 Colors - Replace hex codes with your preferred colors */
+.color1 { background-color: #a2d2ff; }
+.color2 { background-color: #bde0fe; }
+.color3 { background-color: #ffafcc; }
+.color4 { background-color: #ffc8dd; }
+.color5 { background-color: #cdb4db; }
+
+/* The main vertical container */
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column; /* Stacks header, center, and footer vertically */
+}
+
+/* Header and Footer: Fixed heights */
+header, footer {
+    flex: 0 0 150px; /* Does not grow, does not shrink, starts at 150px */
+}
+
+/* The middle section: Horizontal stacking */
+.center {
+    flex: 1; /* Grows to take up all remaining vertical space */
+    display: flex;
+    flex-direction: row; /* Stacks nav, main, and aside horizontally */
+    align-items: stretch; /* Ensures columns are same height */
+    justify-content: center;
+}
+
+/* Column Ratios */
+nav, aside {
+    flex: 1; /* Both sidebar and ad take 1 unit of space */
+}
+
+main {
+    flex: 3; /* Main content takes 3 units of space (3x wider than sidebars) */
+}
